@@ -1,0 +1,571 @@
+/*******nav start******/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 4;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.89);
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding-bottom: 1%;
+}
+
+nav .logo {
+    position: relative;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 14px 16px;
+}
+
+.nav-links a:hover {
+    color: white;
+    background-color: black;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 40px;
+    height: 30px
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+}
+
+@media screen and (max-width:768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: white;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+nav .logo{
+    position: relative;
+    top: 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('barcodebackground3.jpg') no-repeat center center;
+    background-size: cover;
+    color: crimson;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 1s ease; /* Smooth transition */
+}
+
+.hero:hover {
+    transform: scale(1.1); /* Zoom in */
+}
+
+.it1{
+    transition: transform 1s ease; /* Smooth transition */
+}
+
+.it1:hover{
+    transform: scale(1.1); /* Zoom in */
+}
+
+.it2{
+    transition: transform 1s ease; /* Smooth transition */
+}
+
+.it2:hover{
+    transform: scale(1.1); /* Zoom in */
+}
+
+.it3{
+    transition: transform 1s ease; /* Smooth transition */
+}
+
+.it3:hover{
+    transform: scale(1.1); /* Zoom in */
+}
+
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; /* Ensure it is positioned correctly */
+    z-index: 1; /* Ensure it is above other content */
+    display: block; /* Ensure it's not set to none */
+    opacity: 1; /* Ensure it's fully opaque */
+    top: 50px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+/* Existing CSS remains unchanged */
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+}
+
+.features .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.features .item {
+    flex: 1 1 30%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.features .item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.features h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.features p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .features .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .features .item {
+        flex: 1 1 100%; /* Each item takes full width */
+        margin-bottom: 20px; /* Space between stacked items */
+    }
+
+    .features .item img {
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+#back-to-top:hover {
+    background-color: #333;
+}
+
+/* About */
+/* About section styles */
+.about-me {
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque background for readability */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    margin: 100px auto; /* Add top margin to avoid overlap with fixed navbar */
+    max-width: 800px; /* Restrict width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: #333; /* Darker text for readability */
+    text-align: left; /* Align text to left for readability */
+    width: 100%; /* Ensure it takes up the full width of the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.about-me{
+    transition: transform 1s ease; /* Smooth transition */
+}
+
+.about-me:hover{
+    transform: scale(1.1); /* Zoom in */
+}
+
+.about-me h1 {
+    text-align: center; /* Center align the heading */
+    margin-bottom: 40px; /* Increase bottom margin to create space below */
+}
+
+.about-me h2 {
+    color: #444; /* Slightly darker color for headings */
+    margin-bottom: 20px;
+}
+
+.about-me p {
+    line-height: 1.6; /* Improve readability with line height */
+    margin-bottom: 20px;
+}
+
+.about-me ul {
+    list-style-type: square; /* Use square bullets for list items */
+    padding-left: 20px;
+}
+
+.about-me ul li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .about-me {
+        margin: 80px 10px; /* Reduce margin on smaller screens */
+        padding: 15px;
+    }
+
+    .about-me h1 {
+        font-size: 24px; /* Adjust heading size for smaller screens */
+    }
+
+    .about-me h2 {
+        font-size: 20px;
+    }
+}
+
+
+
+/* Existing CSS for navigation, hero, and footer remains unchanged */
+
+/* Services Hero Section */
+.services-hero {
+    background: url('services-hero-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: black;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-hero .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.services-hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.services-hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.services {
+    padding: 50px 20px;
+}
+
+.services .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.services .service-item {
+    flex: 1 1 30%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 1s ease;
+}
+
+.services .service-item:hover {
+    transform: scale(1.1);
+}
+
+.services .service-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.services h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.services p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .services .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .service-item {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .services .service-item img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Existing CSS for navigation, hero, and footer remains unchanged */
+
+/* Contact Hero Section */
+.contact-hero {
+    background: url('contact-hero-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: black;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-hero .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.contact-hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.contact-hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.contact {
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.contact .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-form,
+.contact-info {
+    flex: 1 1 45%;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2,
+.contact-info h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.contact-form form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form form button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form form button:hover {
+    background-color: #333;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.map img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form,
+    .contact-info {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}

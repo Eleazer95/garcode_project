@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GARCODE Digital Services - Contact</title>
+    <meta name="description" content="Get in touch with GARCODE Digital Services. Contact us for mobile app development, web development, and digital training inquiries.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'gar.ico' %}">
+</head>
+<body>
+    <nav class="navHold">
+        <div class="navigation">
+            <div class="logo">
+                <a href="{% url 'main:index' %}"><img class="item" src="{% static 'IMG-20240709-WA0002.jpg' %}" alt="GARCODE Logo" width="100px" height="50px"></a>
+            </div>
+            <div class="text">
+                <p><b>GARCODE Digital Services</b></p>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="{% url 'main:index' %}">HOME</a></li>
+            <li><a href="{% url 'main:services' %}">SERVICES</a></li>
+            <li><a href="{% url 'main:contact' %}">CONTACT</a></li>
+            <li><a href="{% url 'main:about' %}">ABOUT</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <header class="contact-hero">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>We're here to help. Get in touch with us for any inquiries.</p>
+        </div>
+    </header>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-form">
+                <h2>Contact Form</h2>
+                <form method="post" action="{% url 'main:contact' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><strong>Phone:</strong> +1 234 567 890</p>
+                <p><strong>Email:</strong> info@garcode.com</p>
+                <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3><b>GARCODE</b> Digital Services</h3>
+            <p>Your one-stop digital service provider.</p>
+            <ul class="socials">
+                <li><a href="https://x.com/garcode_"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/garcode_" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://m.youtube.com/@garcode"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 <b>GARCODE</b>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

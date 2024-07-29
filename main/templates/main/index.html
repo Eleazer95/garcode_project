@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GARCODE Digital Services</title>
+    <meta name="description" content="GARCODE Digital Services offers expert solutions in mobile app development, website creation, and digital training.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'gar.ico' %}">
+</head>
+<body>
+    <nav class="navHold">
+        <div class="navigation">
+            <div class="logo">
+                <a href="{% url 'main:index' %}"><img class="item" src="{% static 'IMG-20240709-WA0002.jpg' %}" alt="GARCODE Logo" width="100px" height="50px"></a>
+            </div>
+            <div class="text">
+                <p><b>GARCODE Digital Services</b></p>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="{% url 'main:index' %}">HOME</a></li>
+            <li><a href="{% url 'main:services' %}">SERVICES</a></li>
+            <li><a href="{% url 'main:contact' %}">CONTACT</a></li>
+            <li><a href="{% url 'main:about' %}">ABOUT</a></li>
+        </ul>
+
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to GARCODE Digital Services</h1>
+            <p><b>Your one-stop solution for mobile app development, website creation, and digital training</b>.</p>
+            <a href="{% url 'main:services' %}" class="cta-button">Explore Our Services</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <div class="item">
+                <div class="it1"><img src="{% static 'mobile-app-development.jpg' %}" alt="Mobile App Development" width="500px" height="300px">
+                    <h2>Mobile App Development</h2>
+                    <p>We create cutting-edge Android and iOS applications tailored to your business needs. From concept to launch, our team ensures a seamless experience.</p></div>
+
+            </div>
+            <div class="item">
+                <div class="it2"><img src="{% static 'web-development.jpg' %}" alt="Web Development" width="500px" height="300px">
+                    <h2>Web Development</h2>
+                    <p>Our expertise in web design and development ensures your company’s online presence is impactful and engaging. We build responsive, user-friendly websites.</p></div>
+
+            </div>
+            <div class="item">
+                <div class="it3"><img src="{% static 'digital-training.jpg' %}" alt="Digital Training" width="500px" height="300px">
+                    <h2>Digital Training</h2>
+                    <p>We offer comprehensive YouTube tutorials and training sessions to help you master digital tools and techniques. Empower yourself with our expert guidance.</p></div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3><b>GARCODE</b> Digital Services</h3>
+            <p>Your one-stop digital service provider.</p>
+            <ul class="socials">
+                <!----- <li><a href=""><i class="fab fa-facebook-f"></i></a></li>--->
+                <li><a href="https://x.com/garcode_"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/garcode_" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                <!----<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>--->
+                <li><a href="https://m.youtube.com/@garcode"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 <b>GARCODE</b>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
